@@ -23,14 +23,30 @@ This project automates API testing for a local server using Postman collections 
 
 ## Project Structure
 
-- **collections/**  
-  Contains exported Postman collections (API test requests and scripts).
+- **Collections/**  
+   Contains exported Postman collections (API test requests and scripts).
 
-- **environment/**  
-  Contains Postman environment files with variables like base URLs and IDs.
+- **Environment/**  
+   Contains Postman environment files with variables like base URLs and IDs.
 
-- **reports/**  
-  Stores the HTML reports generated after each Newman run.
+- **Reports/**  
+   Stores the HTML reports generated after each Newman run.
+
+---
+
+## Install & Setup
+
+- **Clone the repository**
+  https://github.com/torgoldberg/Kantox-api.git
+
+- **Install dependencies**  
+  npm install
+
+- **Run tests with Newman**
+  npx newman run "collections/Kantox API.postman_collection.json" \
+  -e environment/Local.postman_environment.json \
+  -r htmlextra \
+  --reporter-htmlextra-export reports/report.html
 
 ---
 
